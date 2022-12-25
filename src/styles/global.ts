@@ -16,11 +16,13 @@ export const globalStyles = globalCss({
   },
 
   body: {
+    backgroundColor: '$gray700',
+    color: '$gray100',
     'webkit-font-smoothing': 'antialiased',
   },
 
   'body, input, textarea, button': {
-    fontFamily: 'Poppins',
+    fontFamily: 'Barlow Condensed',
     fontSize: '1rem',
     fontWeight: 400,
   },
