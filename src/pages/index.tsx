@@ -18,8 +18,6 @@ export default function Home() {
       </Head>
 
       <Container>
-        <Image src={BackgroundImage} alt="" />
-
         <LeftSide>
           <p>
             <span>NEW</span> PAINEL DE MONOGRAFIA
@@ -36,7 +34,9 @@ export default function Home() {
           </LeftSideButtons>
         </LeftSide>
 
-        <RightSide></RightSide>
+        <RightSide>
+          <Image src={BackgroundImage} alt="" />
+        </RightSide>
       </Container>
     </>
   )

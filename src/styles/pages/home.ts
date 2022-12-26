@@ -1,22 +1,15 @@
 import { styled } from '..'
 
 export const Container = styled('main', {
-  display: 'flex',
-  flexDirection: 'row',
+  width: '100%',
+  height: '100%',
 
-  img: {
-    width: '100%',
-    height: 250,
-    objectFit: 'cover',
-    objectPosition: 'left',
-  },
+  display: 'grid',
+  gridTemplateColumns: 'repeat(2, 1fr)',
 
-  '@media (min-width: 320px) and (max-width: 375px)': {
+  '@media (min-width: 320px) and (max-width: 425px)': {
     flexDirection: 'column',
-
-    img: {
-      margin: '2rem 2rem 6rem',
-    },
+    gridTemplateColumns: 'repeat(1, 1fr)',
   },
 })
 
@@ -26,16 +19,18 @@ export const LeftSide = styled('div', {
   justifyContent: 'center',
   flexDirection: 'column',
 
-  letterSpacing: 1.25,
+  letterSpacing: 1.15,
   color: '$gray800',
 
+  marginLeft: '21.875rem',
   gap: '1rem',
 
   h1: {
-    fontSize: '2.75rem',
+    fontSize: '4rem',
   },
 
   span: {
+    fontSize: '$md',
     fontWeight: 700,
     color: '$gray100',
 
@@ -44,6 +39,24 @@ export const LeftSide = styled('div', {
     marginRight: '0.5rem',
 
     background: '$gray800',
+  },
+
+  p: {
+    fontSize: '$md',
+  },
+
+  '@media (min-width: 425px) and (max-width: 1440px)': {
+    marginLeft: 0,
+  },
+
+  '@media (min-width: 320px) and (max-width: 425px)': {
+    gridRowStart: 2,
+
+    margin: '0',
+
+    h1: {
+      fontSize: '2.75rem',
+    },
   },
 })
 
@@ -56,11 +69,12 @@ export const LeftSideButtons = styled('div', {
   gap: '1rem',
 
   button: {
+    fontSize: '$md',
     color: '$gray100',
 
     border: 0,
     borderRadius: '8px',
-    padding: '0.75rem',
+    padding: '1rem',
 
     background: '$red300',
   },
@@ -69,6 +83,31 @@ export const LeftSideButtons = styled('div', {
     textDecoration: 'none',
     color: '$gray800',
   },
+
+  '@media (min-width: 320px) and (max-width: 425px)': {
+    button: {
+      fontSize: '1rem',
+    },
+  },
 })
 
-export const RightSide = styled('div', {})
+export const RightSide = styled('div', {
+  display: 'flex',
+  alignItems: 'center',
+
+  img: {
+    width: '100%',
+    height: '600px',
+    objectFit: 'cover',
+    objectPosition: 'left',
+  },
+
+  '@media (min-width: 320px) and (max-width: 425px)': {
+    margin: '0 0 -3.5rem',
+
+    img: {
+      height: '275px',
+      margin: '2rem 2rem 6rem',
+    },
+  },
+})
